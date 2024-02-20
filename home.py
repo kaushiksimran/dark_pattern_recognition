@@ -9,7 +9,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 st.header('Dark Pattern Recognition', divider='rainbow')
 model = pickle.load(open('model.pkl','rb'))
 
-text_input = st.text_input("Enter the URL 👇")
+text_input = st.text_input("Enter the URL 👇 (https://www.example.com)")
 if text_input:
     st.write("The URL you entered: ", text_input)
 
@@ -42,7 +42,7 @@ if text_input:
         # print(total)
         per_dark = (c_dark / total ) * 100
         # print('per_dark: ', per_dark)
-        st.subheader(f"Percentage of dark pattern in the provided URL:  :blue[**{per_dark}%**]")
+        st.write(f"Percentage of dark pattern in the provided URL:  :blue[**{per_dark}%**]")
     else:
         print(f'Failed to retrieve the page. Status code: {response.status_code}')
         st.write("Failed to retrieve the page. Status code: ", response.status_code)
