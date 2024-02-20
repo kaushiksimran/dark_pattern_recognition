@@ -42,7 +42,7 @@ if text_input:
         # print(total)
         per_dark = (c_dark / total ) * 100
         # print('per_dark: ', per_dark)
-        st.write(f"Percentage of dark pattern in the provided URL:  :blue[**{per_dark}%**]")
+        st.header(f"Percentage of dark pattern in the provided URL:  :blue[**{per_dark}%**]")
     else:
         print(f'Failed to retrieve the page. Status code: {response.status_code}')
         st.write("Failed to retrieve the page. Status code: ", response.status_code)
