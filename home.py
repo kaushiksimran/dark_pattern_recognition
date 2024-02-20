@@ -9,7 +9,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 st.header('Dark Pattern Recognition', divider='rainbow')
 model = pickle.load(open('model.pkl','rb'))
 
-text_input = st.text_input("Enter the URL 👇 (https://www.example.com)")
+text_input = st.text_input("Enter the URL 👇 in (https://www.example.com) format")
 if text_input:
     st.write("The URL you entered: ", text_input)
 
